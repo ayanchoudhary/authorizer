@@ -1,0 +1,392 @@
+.registration {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    cursor: default;
+}
+
+.registration-- {
+    &bar {
+        position: absolute;
+        height: 100%;
+        width: 36.65%;
+        left: 0px;
+        top: 0px;
+        background: #000000;
+    }
+
+    &page {
+        position: absolute;
+        top: 0px;
+        left: 36.65%;
+        height: 100%;
+        width: 63.35%
+    }
+
+    &back {
+        position: absolute;
+        height: 100px;
+        width: 200px;
+        top: 32px;
+        left: 24px;
+
+        &-image {
+            position: absolute;
+            height: 70px;
+            width: 40px;
+        }
+
+        &-text {
+            position: absolute;
+            width: 210px;
+            height: 54px;
+            left: 16px;
+            top: 24px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        &-text:hover {
+            text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.4)
+        }
+    }
+
+    &back:hover {
+        cursor: pointer;
+    }
+
+    &form {
+        position: absolute;
+        top: 54px;
+        left: 72px;
+    }
+
+    &heading {
+        &-name {
+            position: absolute;
+            left: 170px;
+            top: 108px;
+            height: 32px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            border-radius: 2px;
+        }
+
+        &-emailid {
+            position: absolute;
+            left: 170px;
+            top: 224px;
+            height: 32px;
+            width: 200px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            border-radius: 2px;
+        }
+
+        &-gender {
+            position: absolute;
+            left: 170px;
+            top: 340px;
+            height: 32px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            border-radius: 2px;
+
+            &_male {
+                position: absolute;
+                left: 206px;
+                top: 380px;
+                height: 32px;
+
+                font-family: Orienta;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+
+                color: #000000;
+
+                border-radius: 2px;
+            }
+
+            &_female {
+                position: absolute;
+                left: 296px;
+                top: 380px;
+                height: 32px;
+
+                font-family: Orienta;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+
+                color: #000000;
+
+                border-radius: 2px;
+            }
+
+            &_other {
+                position: absolute;
+                left: 406px;
+                top: 380px;
+                height: 32px;
+
+                font-family: Orienta;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+
+                color: #000000;
+
+                border-radius: 2px;
+            }
+        }
+
+        &-mobile {
+            position: absolute;
+            left: 170px;
+            top: 426px;
+            height: 32px;
+            width: 200px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            border-radius: 2px;
+        }
+
+        &-password {
+            position: absolute;
+            left: 170px;
+            top: 542px;
+            height: 32px;
+            width: 200px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            border-radius: 2px;
+        }
+    }
+
+    &input {
+        &-name {
+            position: absolute;
+            left: 170px;
+            top: 158px;
+            width: 600px;
+            height: 48px;
+
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        &-emailid {
+            position: absolute;
+            left: 170px;
+            top: 274px;
+            width: 500px;
+            height: 48px;
+
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        &-gender {
+            &_male {
+                position: absolute;
+                left: 170px;
+                top: 383px;
+                height: 24px;
+                width: 24px;
+                background-color: #FFFFFF;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 50%;
+
+                border: 2px solid #08BBF4;
+                transition: 0.2s all ease-in;
+                outline: none;
+            }
+
+            &_male:checked {
+                border: 6px solid #08BBF4;
+            }
+
+            &_female {
+                position: absolute;
+                left: 260px;
+                top: 383px;
+                height: 24px;
+                width: 24px;
+                background-color: #FFFFFF;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 50%;
+
+                border: 2px solid #08BBF4;
+                transition: 0.2s all ease-in;
+                outline: none;
+            }
+
+            &_female:checked {
+                border: 6px solid #08BBF4;
+            }
+
+            &_other {
+                position: absolute;
+                left: 370px;
+                top: 383px;
+                height: 24px;
+                width: 24px;
+                background-color: #FFFFFF;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 50%;
+
+                border: 2px solid #08BBF4;
+                transition: 0.2s all ease-in;
+                outline: none;
+            }
+
+            &_other:checked {
+                border: 6px solid #08BBF4;
+            }
+
+            &_male:hover, &_female:hover, &_other:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-mobile {
+            position: absolute;
+            left: 170px;
+            top: 476px;
+            height: 48px;
+            width: 350px;
+            
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        &-password {
+            position: absolute;
+            left: 170px;
+            top: 592px;
+            height: 48px;
+            width: 500px;
+            
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+
+            padding: 18px;
+            font-size: 20px; 
+        }
+    }
+
+    &button {
+        position: absolute;
+        left: 170px;
+        top: 674px;
+        width: 200px;
+        height: 48px;
+
+        background: #08BBF4;
+        border-radius: 2px;
+        border: 2px solid #08BBF4;
+
+        font-family: Orienta;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    &button:hover {
+        cursor: pointer;
+    }
+}

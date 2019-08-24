@@ -64,6 +64,11 @@
             color: #08BBF4;
         }
 
+        &forgotpass:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
         &forgotpass1 {
             position: absolute;
             height: 22px;
@@ -208,11 +213,15 @@
             font-family: Orienta;
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 22px;
             text-align: center;
 
             color: #FFFFFF;
+        }
+
+        &-button:hover {
+            cursor: pointer;
         }
     }
 }
