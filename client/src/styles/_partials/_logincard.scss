@@ -1,0 +1,218 @@
+.logincard {
+    position: absolute;
+    width: 780px;
+    height: 450px;
+    top: calc(50% - 225px);
+    left: calc(50% - 390px);
+
+    background: #FFFFFF;
+    border: 3px solid #08BBF4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.logincard-- {
+
+    &signin- {
+        &block {
+            position: absolute;
+            width: 55%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+    
+            border-right: 4px solid #08BBF4;
+        }
+
+        &details {
+            position: absolute;
+            width: calc(45% - 32px);
+            height: 100%;
+            top: 0px;
+            left: 55%;
+
+            padding: 16px;
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        &forgotpass {
+            position: absolute;
+            height: 22px;
+            width: 150px;
+            top: 140px;
+            left: 48px;
+
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #08BBF4;
+        }
+
+        &forgotpass1 {
+            position: absolute;
+            height: 22px;
+            width: 200px;
+            top: 165px;
+            left: 48px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: rgba($color: #000000, $alpha: 0.7);
+        }
+    }
+
+    &heading {
+        &-id {
+            position: absolute;
+            width: 148px;
+            height: 32px;
+            top: 64px;
+            left: 69px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+        }
+
+        &-password {
+            position: absolute;
+            width: 148px;
+            height: 32px;
+            top: 181px;
+            left: 69px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+        }
+    }
+
+    &input {
+        &-id {
+            position: absolute;
+            width: 271px;
+            height: 36px;
+            top: 108px;
+            left: 69px;
+            padding-left: 12px;
+
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        &-password {
+            position: absolute;
+            width: 271px;
+            height: 36px;
+            top: 225px;
+            left: 69px;
+            padding-left: 12px;
+
+            background: #FFFFFF;
+            border: 2px solid #08BBF4;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+    }
+
+    &submit {
+        position: absolute;
+        width: 150px;
+        height: 42px;
+        top: 327px;
+        left: 69px;
+
+        background: #000000;
+        border: 2px solid #000000;
+
+        font-family: Orienta;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    &submit:hover {
+        cursor: pointer;
+    }
+
+    &register {
+        position: absolute;
+        height: 22px;
+        width: 200px;
+        top: 235px;
+        left: 48px;
+
+        font-family: Orienta;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: rgba($color: #000000, $alpha: 1.0);
+
+        &-button {
+            position: absolute;
+            width: 125px;
+            height: 36px;
+            top: 270px;
+            left: 48px;
+
+            border-radius: 2px;
+            background: #08BBF4;
+            border: 2px solid #08BBF4;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+    }
+}
