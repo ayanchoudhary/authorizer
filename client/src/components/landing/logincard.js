@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LoginApi from '../../api/loginApi'
 import '../../styles/main.scss'
 
 class LoginCard extends Component {
@@ -20,6 +21,9 @@ class LoginCard extends Component {
 
     onButtonPress(event) {
         event.preventDefault()
+        LoginApi(this.state.email,this.state.password).then((res) => {
+            console.log(res)
+        })
     }
 
     register() {

@@ -21,33 +21,46 @@ exports.list = function (req, res) {
 }
 
 exports.create = function(req, res) {
-    const hash = sha256.create()
-    var user = new User()
-    user.name = req.body.name
-    user.password = hash.update(JSON.stringify(req.body.password)).hex()
-    user.gender = req.body.gender
-    user.email = req.body.email
-    user.mobile = req.body.mobile
-    user.save((err) => {
-        if(err) {
+    User.find({'email':req.body.email}, (err,user) => {
+        if (err) 
+            res.send(err)
+        else if(user != '') {
+            console.log(user)
             res.json({
                 success:false,
-                status:'error',
-                message:err
+                message:'User exists'
             })
         }
         else {
-                res.json({
-                success:true,
-                message:'User created successfully',
-                data:user
+            const hash = sha256.create()
+            var user = new User()
+            user.name = req.body.name
+            user.password = req.body.password
+            user.gender = req.body.gender
+            user.email = req.body.email
+            user.mobile = req.body.mobile
+            user.save((err) => {
+                if(err) {
+                    res.json({
+                        success:false,
+                        status:'error',
+                        message:err
+                    })
+                }
+                else {
+                        res.json({
+                        success:true,
+                        message:'User created successfully',
+                        data:user
+                    })
+                }
             })
         }
     })
 }
 
 exports.view = function(req, res) {
-    Users.findById(req.params.id, (err, user) => {
+    User.find({'email':req.body.email}, (err, user) => {
         if(err) {
             res.json({
                 success:false,
@@ -56,20 +69,23 @@ exports.view = function(req, res) {
             })
         }
         else {
-            const hash = sha256.create()
-            // const password = hash.update(JSON.stringify(req.body.password)).hex()
-            // if(password == user.password)
+            if(req.body.password == user[0].password)
             res.json({
                 success:true,
                 message:'User retrieved successfully',
                 data:user
+            })
+            else
+            res.json({
+                success:false,
+                message:'Wrong credentials',
             })
         }
     })
 }
 
 exports.updatePass = function(req, res) {
-    Users.findById(req.params.id, (err, user) => {
+    Users.find({'email':req.body.email}, (err, user) => {
         if(err) 
             res.send(err)
         var hash = sha256.create()
@@ -93,7 +109,7 @@ exports.updatePass = function(req, res) {
 }
 
 exports.updateInfo = function(req, res) {
-    Users.findById(req,params.id, (err,user) => {
+    User.find({'email':req.body.email}, (err,user) => {
         if(err)
             res.send(err)
         user.name = req.body.name
@@ -115,5 +131,18 @@ exports.updateInfo = function(req, res) {
                 })
             }
         })
+    })
+}
+
+exports.deleteUser = function(req,res) {
+    User.remove({'email':req.body.email}, (err) => {
+        if(err)
+            res.send(err)
+        else {
+            res.json({
+                success:true,
+                message:'Users deleted successfully'
+            })
+        }
     })
 }

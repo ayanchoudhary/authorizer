@@ -7,10 +7,13 @@ const axiosInstance = axios.create({
     baseURL: 'http://localhost:8080/api',
   });
 
-export default function loginApi(email,password) {
-    return axiosInstance.post('/users/login', {
+export default function registrationApi(name,email,password,gender,mobile) {
+    return axiosInstance.post('/users', {
+        name:name,
         email:email,
-        password:password
+        password:password,
+        gender:gender,
+        mobile:mobile
     }).then((response) => {
         const res = JSON.parse(response.request.response)
         return res

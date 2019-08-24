@@ -13,11 +13,16 @@ router.route('/users')
     .get(controller.list)
     .post(controller.create)
 
-router.route('/users/:id')
-    .get(controller.view)
+router.route('/users/login')
+    .post(controller.view)
+
+router.route('/users/updatePass')
+    .put(controller.updatePass)
+
+router.route('/users/updateInfo')
     .put(controller.updateInfo)
 
-router.route('/:id')
-    .put(controller.updatePass)
+router.route('/users/delete')
+    .delete(controller.deleteUser)
 
 module.exports = router

@@ -4,8 +4,10 @@ const port = process.env.PORT || 8080
 const routes = require('./routes')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const db = mongoose.connection
 
+app.use('*',cors())
 app.use(bodyParser.urlencoded({
     extended:true
 }))

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import back from '../../assets/back.svg'
+import RegistrationApi from '../../api/registrationApi'
 import '../../styles/main.scss'
 
 class Registration extends Component {
@@ -47,6 +48,22 @@ class Registration extends Component {
     onButtonPress(event) {
         event.preventDefault()
         const { emailId, name, mobile_no, gender, pic } = this.props;
+        RegistrationApi(this.state.Name,this.state.EmailID,this.state.Password,this.state.Gender,this.state.MobileNo).then((res) => {
+            if(res.success) {
+                window.alert('Registration done for '+this.state.Name)
+                window.location = '/'
+            }
+            else {
+                if(res.message === 'User exists') {
+                    window.alert('E-mail already registered')
+                    window.location = '/'
+                }
+                else {
+                    window.alert('Some error occurred')
+                    window.location = '/'
+                }
+            }
+        })
     }
 
     componentWillReceiveProps(props) {
@@ -67,54 +84,18 @@ class Registration extends Component {
                 <div className='registration--form'>
                     <form onSubmit={ this.onButtonPress.bind(this) }>
                         <div className='registration--heading-name'>Name:</div>
-                        <input 
-                            className='registration--input-name' 
-                            type='text' 
-                            onChange={ this.onNameChange.bind(this) }
-                            required/>
+                        <input className='registration--input-name' type='text' onChange={ this.onNameChange.bind(this) }required/>
                         <div className='registration--heading-emailid'>Email ID:</div>
-                        <input 
-                            className='registration--input-emailid' 
-                            type='text' 
-                            onChange={ this.onEmailIdChange.bind(this) }
-                            required/>
+                        <input className='registration--input-emailid' type='text' onChange={ this.onEmailIdChange.bind(this) }required/>
                         <div className='registration--heading-gender'>Gender:</div>
-                        <input 
-                            className='registration--input-gender_male' 
-                            type='radio'
-                            name='gender'
-                            value='Male'
-                            onChange= {this.onGenderSelect.bind(this)}
-                            required/><span className='registration--heading-gender_male'>Male</span>
-                        <input 
-                            className='registration--input-gender_female' 
-                            type='radio'
-                            name='gender'
-                            value='Female'
-                            onChange= {this.onGenderSelect.bind(this)}
-                            required/><span className='registration--heading-gender_female'>Female</span>
-                        <input 
-                            className='registration--input-gender_other' 
-                            type='radio'
-                            name='gender' 
-                            value='Other'
-                            onChange= {this.onGenderSelect.bind(this)}
-                            required/><span className='registration--heading-gender_other'>Other</span>
+                        <input className='registration--input-gender_male' type='radio' name='gender' value='Male' onChange= {this.onGenderSelect.bind(this)} required/><span className='registration--heading-gender_male'>Male</span>
+                        <input className='registration--input-gender_female' type='radio' name='gender' value='Female' onChange= {this.onGenderSelect.bind(this)} required/><span className='registration--heading-gender_female'>Female</span>
+                        <input className='registration--input-gender_other' type='radio' name='gender'  value='Other' onChange= {this.onGenderSelect.bind(this)} required/><span className='registration--heading-gender_other'>Other</span>
                         <div className='registration--heading-mobile'>Mobile Number:</div>
-                        <input 
-                            className='registration--input-mobile' 
-                            type='text' 
-                            onChange={ this.onMobileNumChange.bind(this) }
-                            required/>
+                        <input className='registration--input-mobile' type='text' onChange={ this.onMobileNumChange.bind(this) } required/>
                         <div className='registration--heading-password'>Password:</div>
-                        <input 
-                            className='registration--input-password' 
-                            type='password' 
-                            onChange={ this.onPasswordChange.bind(this) }
-                            required/>
-                        <button 
-                            className='registration--button' 
-                            type='submit'>Register</button>
+                        <input className='registration--input-password' type='password' onChange={ this.onPasswordChange.bind(this) } required/>
+                        <button className='registration--button' type='submit'>Register</button>
                     </form>
                 </div>
                 </div>
