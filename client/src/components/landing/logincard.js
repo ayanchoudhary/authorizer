@@ -22,9 +22,9 @@ class LoginCard extends Component {
     onButtonPress(event) {
         event.preventDefault()
         LoginApi(this.state.email,this.state.password).then((res) => {
-            console.log(res.data[0])
             localStorage.setItem('res',JSON.stringify(res.data[0]))
-            window.location = '/user'
+            localStorage.setItem('success',res.success)
+            window.location = '/user/'+res.data[0]._id
         })
     }
 

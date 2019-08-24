@@ -11,7 +11,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={ Landing }/>
         <Route exact path='/register' component={ Register } />
-        <Route exact path='/user' component={ User } />
+        <Route exact path='/user/:id?' component={ User } />
       </Switch>
     </BrowserRouter>
   );

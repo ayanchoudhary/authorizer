@@ -134,7 +134,7 @@ exports.updateInfo = function(req, res) {
             else {
                 res.json({
                     success:true,
-                    message:'User created successfully',
+                    message:'User updated successfully',
                 })
             }
         })
