@@ -1,0 +1,33 @@
+{
+  "name": "authorizer",
+  "version": "1.0.0",
+  "description": "A simple authentication portal made using React and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyanChoudhary/authorizer.git"
+  },
+  "keywords": [
+    "api",
+    "authorizer",
+    "react",
+    "restful",
+    "mongodb"
+  ],
+  "author": "AyanChoudhary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AyanChoudhary/authorizer/issues"
+  },
+  "homepage": "https://github.com/AyanChoudhary/authorizer#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "js-sha256": "^0.9.0",
+    "mongoose": "^5.6.10",
+    "nodemon": "^1.19.1"
+  }
+}
