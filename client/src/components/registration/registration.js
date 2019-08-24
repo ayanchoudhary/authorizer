@@ -22,12 +22,10 @@ class Registration extends Component {
     }
 
     onEmailIdChange(event) {
-        //this.props.emailIdChanged_reg(event);
         this.setState({ EmailID:event.target.value })
     }
 
     onNameChange(event) {
-        //this.props.nameChanged(text);
         this.setState({ Name:event.target.value })
     }
 
@@ -36,18 +34,15 @@ class Registration extends Component {
     }
 
     onMobileNumChange(event) {
-        //this.props.mobileNumChanged(text);
         this.setState({ MobileNo:event.target.value })
     }
 
     onGenderSelect(event) {
-        //this.props.genderSelect(text)
         this.setState({ Gender:event.target.value })
     }
 
     onButtonPress(event) {
         event.preventDefault()
-        const { emailId, name, mobile_no, gender, pic } = this.props;
         RegistrationApi(this.state.Name,this.state.EmailID,this.state.Password,this.state.Gender,this.state.MobileNo).then((res) => {
             if(res.success) {
                 window.alert('Registration done for '+this.state.Name)

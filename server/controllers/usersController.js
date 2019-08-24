@@ -85,26 +85,33 @@ exports.view = function(req, res) {
 }
 
 exports.updatePass = function(req, res) {
-    Users.find({'email':req.body.email}, (err, user) => {
+    User.find({'email':req.body.email}, (err, user) => {
         if(err) 
             res.send(err)
-        var hash = sha256.create()
-        user.password = hash.update(JSON.stringify(req.param.password)).hex()
-        user.save((err) => {
-            if(err) {
-                res.json({
-                    success:false,
-                    status:'error',
-                    message:err
-                })
-            }
-            else {
-                res.json({
-                    success:true,
-                    message:'User created successfully',
-                })
-            }
-        })
+        else if(user != '') {
+            user[0].password = req.body.password
+            user[0].save((err) => {
+                if(err) {
+                    res.json({
+                        success:false,
+                        status:'error',
+                        message:err
+                    })
+                }
+                else {
+                    res.json({
+                        success:true,
+                        message:'Password updated successfully',
+                    })
+                }
+            })
+        }
+        else {
+            res.json({
+                success:false,
+                message:'User does not exist'
+            })
+        }
     })
 }
 

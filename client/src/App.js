@@ -3,6 +3,7 @@ import './App.css';
 import { Switch,Route,BrowserRouter } from 'react-router-dom'
 import Landing from './pages/landing';
 import Register from './pages/register'
+import User from './pages/user';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={ Landing }/>
         <Route exact path='/register' component={ Register } />
+        <Route exact path='/user' component={ User } />
       </Switch>
     </BrowserRouter>
   );

@@ -22,7 +22,9 @@ class LoginCard extends Component {
     onButtonPress(event) {
         event.preventDefault()
         LoginApi(this.state.email,this.state.password).then((res) => {
-            console.log(res)
+            console.log(res.data[0])
+            localStorage.setItem('res',JSON.stringify(res.data[0]))
+            window.location = '/user'
         })
     }
 
@@ -43,7 +45,7 @@ class LoginCard extends Component {
                     </form>
                 </div>
                 <div className='logincard--signin-details'>
-                    <div className='logincard--signin-forgotpass'>Forgot Password?</div><div className='logincard--signin-forgotpass1'>Make new one right now. </div>
+                    <div className='logincard--signin-forgotpass' onClick={this.props.handlePassword}>Forgot Password?</div><div className='logincard--signin-forgotpass1'>Make new one right now. </div>
                     <div><div className='logincard--register'>New to this place?</div><button className='logincard--register-button' onClick={this.register.bind(this)}>Register</button></div>
                 </div>
             </div>
