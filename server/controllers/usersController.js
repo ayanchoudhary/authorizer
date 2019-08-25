@@ -119,11 +119,11 @@ exports.updateInfo = function(req, res) {
     User.find({'email':req.body.email}, (err,user) => {
         if(err)
             res.send(err)
-        user.name = req.body.name
-        user.gender = req.body.gender
-        user.mail - req.body.mail
-        user.mobile = req.body.mobile
-        user.save((err) => {
+        user[0].name = req.body.name
+        user[0].gender = req.body.gender
+        user[0].email - req.body.email
+        user[0].mobile = req.body.mobile
+        user[0].save((err) => {
             if(err) {
                 res.json({
                     success:false,

@@ -4,6 +4,27 @@
     width: 100%;
     top: 0px;
     left: 0px;
+
+    input {
+        position: absolute;
+        left: 100px;
+        height: 32px;
+        width: 375px;
+        border: 2px solid #08BBF2;
+
+        font-family: Orienta;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        text-indent: 12px
+    }
+
+    span {
+        position: absolute;
+        left: 100px
+    }
 }
 
 .user-- {
@@ -39,6 +60,10 @@
         z-index: 1;
     }
 
+    &signout:hover {
+        cursor: pointer;
+    }
+
     &info {
         position: absolute;
         width: 73.35%;
@@ -48,8 +73,8 @@
 
         &-name {
             position: absolute;
-            width: 300px;
-            height: 200px;
+            width: 500px;
+            height: 32px;
             top: 128px;
             left: 128px;
 
@@ -66,8 +91,8 @@
         &-email {
             position: absolute;
             width: 500px;
-            height: 200px;
-            top: 170px;
+            height: 32px;
+            top: 190px;
             left: 128px;
 
             font-family: Orienta;
@@ -82,9 +107,9 @@
 
         &-gender {
             position: absolute;
-            width: 300px;
-            height: 200px;
-            top: 212px;
+            width: 500px;
+            height: 32px;
+            top: 252px;
             left: 128px;
 
             font-family: Orienta;
@@ -99,9 +124,9 @@
 
         &-mobile {
             position: absolute;
-            width: 300px;
-            height: 200px;
-            top: 254px;
+            width: 500px;
+            height: 32px;
+            top: 314px;
             left: 128px;
 
             font-family: Orienta;
@@ -112,6 +137,74 @@
             text-align: left;
 
             color: #000000;
+        }
+
+        &-change {
+            position: absolute;
+            width: 300px;
+            height: 32px;
+            top: 438px;
+            left: 128px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 22px;
+            text-align: left;
+
+            color: #08BBF2;
+        }
+
+        &-change:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &-change_button {
+            position: absolute;
+            width: 175px;
+            height: 48px;
+            top: 458px;
+            left: 128px;
+            background: #000000;
+            border: 2px solid #000000;
+            border-radius: 2px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 22px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        &-change_button:hover {
+            cursor: pointer;
+        }
+
+        &-change_cancel {
+            position: absolute;
+            width: 300px;
+            height: 32px;
+            top: 469px;
+            left: 358px;
+
+            font-family: Orienta;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 22px;
+            text-align: left;
+
+            color: #08BBF2;
+        }
+
+        &-change_cancel:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
 }
