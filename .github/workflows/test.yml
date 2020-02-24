@@ -20,6 +20,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Export token to env
       run: |
+        echo ${{ secrets.token }}
         pip3 install PyGithub
         export GITHUB_TOKEN=${{ secrets.token }}
     - name: Run Normalize Script
