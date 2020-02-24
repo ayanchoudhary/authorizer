@@ -24,7 +24,7 @@ jobs:
       run: |
         pip3 install PyGithub
         export GITHUB_TOKEN=dsadsa
-        echo ${{env}}
+        echo ${{ env.GITHUB_TOKEN }}
     - name: Run Normalize Script
       run: |
         python3 test.py
