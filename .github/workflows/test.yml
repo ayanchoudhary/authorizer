@@ -20,6 +20,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
       env:
         token: ${{ secrets.token }}
+        totem: asdsada
     - name: Export token to env
       run: |
         echo env
