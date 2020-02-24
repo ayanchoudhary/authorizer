@@ -1,5 +1,7 @@
 ## Authorizer
 
+![Normalize](https://github.com/AyanChoudhary/authorizer/workflows/Normalize/badge.svg)
+
 ### A simple authentication portal in MongoDB, NodeJS and React.
 
 #### Setup Instructions
