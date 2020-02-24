@@ -1,7 +1,5 @@
 ## Authorizer
 
-![](https://github.com/AyanChoudhary/authorizer/workflows/Normalize%20Repos/badge.svg)
-
 ### A simple authentication portal in MongoDB, NodeJS and React.
 
 #### Setup Instructions

@@ -1,4 +1,4 @@
-name: Normalize Repos
+name: Normalize
 
 on: 
   schedule:
@@ -20,7 +20,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Export token to env
       run: |
-        export GITHUB_TOKEN = '9f37499177eaa2a037de1e9c92fb1d3a6264e08e0'
+        pip install PyGithub
+        export GITHUB_TOKEN=8c8f2b94e3b6d917bc5cd522aab510236b66595a
     - name: Run Normalize Script
       run: |
         python3 test.py
