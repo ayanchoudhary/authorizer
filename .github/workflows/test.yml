@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.5, 3.6, 3.7, 3.8]
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Export token to env
       run: |
-        pip3 install PyGithub
+        pip install PyGithub
         export GITHUB_TOKEN=${{ secrets.token }}
     - name: Run Normalize Script
       run: |
