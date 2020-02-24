@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+      env:
+        token: ${{ secrets.token }}
     - name: Export token to env
       run: |
         echo ${{ secrets.token }}
