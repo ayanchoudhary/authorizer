@@ -22,7 +22,7 @@ jobs:
         token: ${{ secrets.token }}
     - name: Export token to env
       run: |
-        echo ${{ secrets.token }}
+        echo env
         pip3 install PyGithub
         export GITHUB_TOKEN=${{ secrets.token }}
     - name: Run Normalize Script
