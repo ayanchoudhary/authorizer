@@ -1,8 +1,7 @@
 name: Normalize
 
 on: 
-  schedule:
-  - cron: '0-30 * * * *'
+  push
 
 jobs:
   build:
