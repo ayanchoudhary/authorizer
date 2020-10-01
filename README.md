@@ -8,7 +8,7 @@
 
 1. Install and setup MongoDB and NodeJs.
 2. Clone the repository
-3. Enter the server folder <br/>```cd authorizer/server```<br/> ```npm install```
+3. Enter the server folder by `cd authorizer/server` and run `npm install`
 4. Run ```npm start```
 5. In a second terminal run ```mongo``` to start mongoDB server
 5. In another terminal enter the client folder <br/>```cd authorizer/client```<br/>```npm install``` 
