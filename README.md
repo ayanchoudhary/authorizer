@@ -11,6 +11,10 @@
 3. Enter the server folder by `cd authorizer/server` and run `npm install`
 4. Run ```npm start```
 5. In a second terminal run ```mongo``` to start mongoDB server
-5. In another terminal enter the client folder <br/>```cd authorizer/client```<br/>```npm install``` 
+5. In another terminal enter the client folder 
+```
+cd authorizer/client
+npm install
+``` 
 6. Run ```npm start```
 7. Go to ```localhost:3000``` for the application
