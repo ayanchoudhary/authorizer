@@ -6,7 +6,7 @@
 
 #### Setup Instructions
 
-1. Install and setup MongoDB and NodeJs.
+1. Install and setup ![MongoDB](https://www.mongodb.com/docs/manual/installation/) and ![NodeJs](https://nodejs.org/en/download/).
 2. Clone the repository
 3. Enter the server folder by `cd authorizer/server` and run `npm install`
 4. Run ```npm start```
